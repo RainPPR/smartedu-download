@@ -1,9 +1,10 @@
 import sys
 import common
 import threading
+import random
 
 def download(id, path):
-    data = common.fetch_json(f'https://s-file-1.ykt.cbern.com.cn/zxx/ndrv2/resources/tch_material/details/{id}.json')
+    data = common.fetch_json(f'https://s-file-{random.randint(1, 3)}.ykt.cbern.com.cn/zxx/ndrv2/resources/tch_material/details/{id}.json')
     path = path + data['global_title']['zh-CN'] + '.pdf'
     print(f'开始下载：{data['global_title']['zh-CN']}.pdf')
     for item in data['ti_items']:
