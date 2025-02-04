@@ -24,7 +24,7 @@ def Main():
         op = argv[1]
         data = argv[2:]
         if op == 'id':
-            download.download_ids(data)
+            download.download_id(data)
         elif op == 'url':
             download.download_url(data[2])
         else:
