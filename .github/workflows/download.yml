@@ -25,7 +25,7 @@ jobs:
       - name: Download PDF
         run: |
           cd script
-          python main.py ${{ github.event.inputs.id }}
+          python download.py ${{ github.event.inputs.id }}
       - name: Config Git
         run: |
           git config user.name github-actions[bot]

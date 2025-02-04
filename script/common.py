@@ -17,4 +17,5 @@ def download_file(url, filename):
     with open(filename, 'wb') as file:
         for chunk in response.iter_content(chunk_size=8192):
             file.write(chunk)
+    print(f'下载完成：{filename}')
     return True
