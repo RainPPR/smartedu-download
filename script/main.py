@@ -26,7 +26,7 @@ def Main():
         if op == 'id':
             download.download_id(data)
         elif op == 'url':
-            download.download_url(data[2])
+            download.download_url(data[0])
         else:
             print('错误：找不到该命令！')
             print(hints['default'])
